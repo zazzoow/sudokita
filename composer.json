@@ -1,0 +1,17 @@
+{
+    "autoload": {
+        "classmap": [
+            "./"
+        ],
+        "files": [
+            "helpers/helpers.php"
+        ]
+    },
+    
+    "extra": {
+        "branch-alias": {
+            "index.php": "/"
+        }
+    }
+
+}
