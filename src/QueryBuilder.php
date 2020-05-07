@@ -16,7 +16,7 @@ class QueryBuilder
 
     public function getImageFromDatabase()
     {
-        $query = 'SELECT * FROM comics WHERE id = 0';
+        $query = 'SELECT * FROM comics WHERE id = 1';
 
         var_dump($this->pdo);
 
