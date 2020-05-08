@@ -41,3 +41,16 @@ INSERT INTO comics(id,name,added) VALUES(14,'/sudokita/image/image-04.jpg',NOW()
 -- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
 -- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
 -- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
+
+
+CREATE TABLE user (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255),
+  firstname VARCHAR(255) NOT NULL,
+  phoneNUM VARCHAR(10),
+  email VARCHAR(50),
+  subject VARCHAR (20) NOT NULL,
+  message VARCHAR (500) NOT NULL,
+  added datetime,
+  PRIMARY KEY (id)
+);
