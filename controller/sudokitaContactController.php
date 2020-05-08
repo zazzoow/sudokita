@@ -6,9 +6,11 @@ if(isset($_POST) && !empty($_POST))
 {
     $post = sanitize($_POST);
 
-    dd($post);
+    var_dump($post);
 
-    Post::sendDT($post);
+    $send = new Post();
+
+    $send->sendDT($post);
 };
 
 require 'views/contact.views.php';

@@ -16,7 +16,7 @@ class QueryBuilder
 
     public function getImageFromDatabase()
     {
-        $query = 'SELECT * FROM comics WHERE id = 1';
+        $query = "SELECT * FROM comics WHERE id = 1";
 
         var_dump($this->pdo);
 
@@ -38,7 +38,9 @@ class QueryBuilder
     }
     public function sendDataToDataBase($post)
     {
-         $query = "INSERT INTO user VALUES()";
+         $query = "INSERT INTO user(name,firstname,phoneNUM,email,subject,message) VALUES(:$post['name'] ,: $post[' firstname'] , : $post['subject'] ,: $post['email'],: $post['phoneNUM'] , $post['message'])";         // dd($query);
+
+         dd($query);
 
          return $this->pdo->query($query)->execute();
     }
