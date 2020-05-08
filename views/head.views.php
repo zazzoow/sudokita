@@ -5,5 +5,6 @@
     <body>
         <h1>heya</h1>
         <a href ='Categories'>le lien</a>
+        <a href ='Contact'>le lien</a
     </body>
 </html>

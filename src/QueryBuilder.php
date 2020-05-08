@@ -36,4 +36,11 @@ class QueryBuilder
 
          return $this->pdo->query($query)->fetch($this->pdo::FETCH_OBJ);
     }
+    public function sendDataToDataBase($post)
+    {
+         $query = "INSERT INTO user VALUES()";
+
+         return $this->pdo->query($query)->execute();
+    }
+
 }

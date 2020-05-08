@@ -8,4 +8,4 @@ $img = $image->getImage();
 
 var_dump($img);
 
-include "views/foot.views.php";
+include "views/categories.views.php";
