@@ -27,7 +27,7 @@ class QueryBuilder
     {
         $query = "INSERT INTO user(name,email,password) VALUES(:'$name',:'$email',:'$password')";
 
-        return $this->pdo->query($query)->execute();
+        return $this->pdo->query($query);
     }
 
     public function checkIdentityOfUser($table,$email)
@@ -38,11 +38,11 @@ class QueryBuilder
     }
     public function sendDataToDataBase($post)
     {
-         $query = "INSERT INTO user(name,firstname,phoneNUM,email,subject,message) VALUES(:$post['name'] ,: $post[' firstname'] , : $post['subject'] ,: $post['email'],: $post['phoneNUM'] , $post['message'])";         // dd($query);
+         $query = "INSERT INTO user(name,firstname,phoneNUM,email,subject,message,added) VALUES('$post[name]','$post[firstname]','$post[phoneNUM]','$post[email]','$post[subject]','$post[message]',NOW())";
 
-         dd($query);
+         var_dump($query);
 
-         return $this->pdo->query($query)->execute();
+         return $this->pdo->query($query);
     }
 
 }

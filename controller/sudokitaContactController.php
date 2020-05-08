@@ -2,8 +2,8 @@
 
 namespace App;
 
-if(isset($_POST) && !empty($_POST))
-{
+if(!empty($_POST))  {
+
     $post = sanitize($_POST);
 
     var_dump($post);
