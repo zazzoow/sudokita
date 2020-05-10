@@ -29,11 +29,11 @@ CREATE TABLE image (
   PRIMARY KEY (id)
 );
 
-INSERT INTO comics(name,added) VALUES('/sudokita/image/51kiVmDxVWL._SX348_BO1,204,203,200_.jpg',NOW());
-INSERT INTO comics(name,added) VALUES('/sudokita/image/image-04.jpg',NOW());
--- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
--- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
--- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/51kiVmDxVWL._SX348_BO1,204,203,200_.jpg',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/image-04.jpg',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/Papyrus1.PNG.png',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/Toriel_battle.png',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/Undyne.gif',NOW());
 -- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
 -- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
 -- INSERT INTO comics(id,name,added) VALUES(1,,NOW());

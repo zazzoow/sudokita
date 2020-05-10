@@ -1,6 +1,5 @@
 <?php
 
-
 function dd(...$args)
 {
     echo'<pre>';

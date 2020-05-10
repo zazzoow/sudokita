@@ -7,11 +7,10 @@
             "helpers/helpers.php"
         ]
     },
-    
+
     "extra": {
         "branch-alias": {
             "index.php": "/"
         }
     }
-
 }

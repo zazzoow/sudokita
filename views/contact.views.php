@@ -1,4 +1,4 @@
-
+<?php require 'views/head.views.php'; ?>
 
 <html lang = fr>
     <head></head>
@@ -16,3 +16,5 @@
         </form>
     </body>
 </html>
+
+<?php require 'views/foot.views.php'; ?>

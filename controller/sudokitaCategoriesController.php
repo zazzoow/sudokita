@@ -4,7 +4,7 @@ namespace App;
 
 $image = new Post();
 
-$img = $image->getImage();
+$img = $image->getComics();
 
 var_dump($img);
 

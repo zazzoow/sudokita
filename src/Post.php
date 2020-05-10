@@ -13,13 +13,17 @@ class Post
         $this->querybuilder = $querybuilder;
     }
 
-    public function getImage()
+    public function getComics()
     {
-        return $this->querybuilder->getImageFromDatabase();
+        return $this->querybuilder->getComicsFromDatabase();
     }
 
     public function sendDT($post)
     {
       return $this->querybuilder->sendDataToDataBase($post);
+    }
+    public function getImage()
+    {
+      return $this->querybuilder->getImageFromDatabase();
     }
 }

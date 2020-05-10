@@ -12,3 +12,5 @@
         <?php endif ?>
     </body>
 </html>
+
+<?php require 'views/foot.views.php'; ?>

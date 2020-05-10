@@ -4,7 +4,6 @@ namespace App;
 
 class QueryBuilder
 {
-
    protected $config;
 
     public function __construct()
@@ -14,7 +13,7 @@ class QueryBuilder
         $this->pdo = Connection::connect($config);
     }
 
-    public function getImageFromDatabase()
+    public function getComicsFromDatabase()
     {
         $query = "SELECT * FROM comics WHERE id = 1";
 
@@ -45,4 +44,11 @@ class QueryBuilder
          return $this->pdo->query($query);
     }
 
+    public function getImageFromDatabase()
+    {
+          $query = "SELECT * FROM image";
+
+          return $this->pdo->query($query)->fetchAll($this->pdo::FETCH_OBJ);
+
+    }
 }
