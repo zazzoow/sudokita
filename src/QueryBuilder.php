@@ -8,7 +8,7 @@ class QueryBuilder
 
     public function __construct()
     {
-        $config = include'config.php';
+        $config = config();
 
         $this->pdo = Connection::connect($config);
     }
