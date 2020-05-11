@@ -46,9 +46,9 @@ class QueryBuilder
 
     public function getImageFromDatabase()
     {
-          $query = "SELECT * FROM image";
+          $query = "SELECT name FROM image";
 
-          return $this->pdo->query($query)->fetchAll($this->pdo::FETCH_OBJ);
+          return $this->pdo->query($query)->fetchAll($this->pdo::FETCH_COLUMN);
 
     }
 }

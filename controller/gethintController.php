@@ -8,8 +8,4 @@ $image = new Post();
 
 $img = $image->getImage();
 
-$ObjImg  = json_encode($img);
-
-// var_dump($ObjImg);
-
-echo  $ObjImg;
+echo  json_encode($img);
