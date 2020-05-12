@@ -34,13 +34,13 @@ INSERT INTO image(name,added) VALUES('/sudokita/image/image-04.jpg',NOW());
 INSERT INTO image(name,added) VALUES('/sudokita/image/Papyrus1.PNG.png',NOW());
 INSERT INTO image(name,added) VALUES('/sudokita/image/Toriel_battle.png',NOW());
 INSERT INTO image(name,added) VALUES('/sudokita/image/Undyne.gif',NOW());
--- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
--- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
--- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
--- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
--- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
--- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
--- INSERT INTO comics(id,name,added) VALUES(1,,NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/charizard.jpg',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/f519914cf3a39ab057d3d31f09f98548.png',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/téléchargement.png',NOW());
+-- INSERT INTO image(name,added) VALUES('/sudokita/',NOW());
+-- INSERT INTO image(name,added) VALUES('/sudokita/',NOW());
+-- INSERT INTO image(name,added) VALUES('/sudokita/',NOW());
+-- INSERT INTO image(name,added) VALUES('/sudokita/',NOW());
 
 
 CREATE TABLE user (
