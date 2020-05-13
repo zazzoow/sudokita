@@ -2,9 +2,10 @@ let httpRequest = new XMLHttpRequest();
 let rightArrow = document.getElementById("slider-next");
 let leftArrow = document.getElementById("slider-previous");
 let div = document.getElementById("lol");
-// let sans = document.getElementById("sans");
 let i = 0;
-
+let j = 0;
+let k = 0;
+let print = '';
 ///////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 ///////////////////function////////////////////////
@@ -13,52 +14,63 @@ function carrousel(img,slider) {
     addImage(img);
    };
 
-
 function addImage(img) {
-  console.log(i);
-
-  let print = '';
+  // console.log(i);
   let count = 6;
-  let j = 0;
 
-  reboot(count,img);
+  reboot(img);
   localStorage.getItem("image",i);
-  console.log(i);
+  // console.log(i);
 
-  for(j = j + i ; j  + i < count + i ; j++) {
+  for(j + i ;j + i < count + i ; j++) {
 
-    let images = document.createElement("img");
-    images.src = img[j + i];
-    images.width = "100";
-    images.height = "100";
+      let images = document.createElement("img");
+      images.width = "100";
+      images.height = "100";
 
-    // sans.replaceWith(images);
-    // console.log(i);
-    print += '<img src = '+ images.src +' width = '+ images.width +' height = '+  images.height +'>';
+      if( ((i + j) < (img.length) && (j + i) >= 0) || (j + i) <= ( -1 * img.length) || k == img.length ) {
+        console.log("neutre");
+       images.src = img[j + i];
+       k = 0;
+       localStorage.setItem('k',k);
+      }
 
-  };
+      else if((i + j) < 0) {
+        console.log("--");
+        console.log(i);
+        images.src = img[img.length + i + j];
+      }
 
-  div.innerHTML = print;
-  localStorage.setItem("image",i);
+       else if( (i + j) >= (img.length) ) {
+         localStorage.setItem('k',k);
+         console.log(i);
+         // console.log(j);
+         console.log("++");
+         images.src = img[k];
+         k++;
+         localStorage.setItem('k',k);
+         // images.src = img[4];
+      }
+
+      print += '<img src = '+ images.src +' width = '+ images.width +' height = '+  images.height +'>';
+
+    div.innerHTML = print;
+    localStorage.setItem("image",i);
+   };
+
 };
+function reboot(img) {
+   j = 0;
+   print = '';
 
-function reboot(count,img) {
-  if( i + count > img.length ) {
-   i = 0;
-   console.log(i);
-
-   return localStorage.setItem("image",i);
-  }
-  else if ( i < 0 ) {
-    i = img.length - count - 1;
-    console.log(i);
-
-    return localStorage.setItem("image",i);
-  }
+   if(i == img.length || i == -img.length) {
+      i = 0;
+     return localStorage.setItem("image",i);
+   };
 };
 
 function indexChange(slider) {
-  console.log(i);
+  // console.log(i);
   localStorage.getItem("image",i);
   switch(slider) {
       case "next":
