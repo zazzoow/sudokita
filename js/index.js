@@ -2,8 +2,6 @@ let httpRequest = new XMLHttpRequest();
 let rightArrow = document.getElementById("slider-next");
 let leftArrow = document.getElementById("slider-previous");
 let div = document.getElementById("lol");
-let sans = document.createElement("img");
-div.appendChild(sans);
 // let sans = document.getElementById("sans");
 let i = 0;
 
@@ -19,6 +17,7 @@ function carrousel(img,slider) {
 function addImage(img) {
   console.log(i);
 
+  let print = '';
   let count = 6;
   let j = 0;
 
@@ -35,10 +34,11 @@ function addImage(img) {
 
     // sans.replaceWith(images);
     // console.log(i);
-    console.log(span.parentNode);
-    div.appendChild(images);
+    print += '<img src = '+ images.src +' width = '+ images.width +' height = '+  images.height +'>';
 
   };
+
+  div.innerHTML = print;
   localStorage.setItem("image",i);
 };
 
