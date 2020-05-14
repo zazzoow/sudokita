@@ -1,12 +1,15 @@
 class Caroussel
 {
 
- constructor(img,slider,i,k)
+ constructor(img,slider)
  {
    this.img = img;
    this.slider = slider;
-   this.i = i;
-   this.k = k;
+   this.i = 0;
+   this.k = 0;
+   this.key = "next";
+   this.key2 = "previous";
+   this.storage = window.localStorage;
  }
 
  carouss()
@@ -16,11 +19,11 @@ class Caroussel
  }
 
  setlocal(store,item) {
-   localStorage.setItem(store,item);
+   this.storage.setItem(store,item);
  }
 
  getlocal(store,item) {
-   localStorage.getItem(store,item);
+   return parseInt(this.storage.getItem(store,item));
  }
   addImage(img)
  {
@@ -34,9 +37,9 @@ class Caroussel
     images.height = "100";
 
     this.reboot(img);
-    this.getlocal('i',this.i);
-    console.log(this.getlocal('i',this.i));
+    this.getlocal(this.key,this.i);
 
+    console.log(this.getlocal(this.key,this.i));
 
     for(j + this.i ;j + this.i < count + this.i ; j++) {
       console.log(this.i,j);
@@ -44,7 +47,7 @@ class Caroussel
         if( ((this.i + j) < (img.length) && (j + this.i) >= 0) || (j + this.i) <= ( -1 * img.length) || this.k == img.length ) {
            images.src = img[j + this.i];
            this.k = 0;
-          this.setlocal('k',this.k);
+          this.setlocal(this.key2,this.k);
         }
 
         else if((this.i + j) < 0) {
@@ -52,41 +55,55 @@ class Caroussel
         }
 
         else if( (this.i + j) >= (img.length) ) {
-           this.getlocal('k',this.k);
+          if(!localStorage.hasOwnProperty(this.key2)) {
+             this.setlocal(this.key2,this.k);
+           }
+           this.k = this.getlocal(this.key2,this.k);
            images.src = img[this.k];
-           this.k++;
-           this.setlocal('k',this.k);
+           this.k = (this.k) + 1;
+           this.setlocal(this.key2,this.k);
 
         }
 
         print += '<img src = '+ images.src +' width = '+ images.width +' height = '+  images.height +' href = ' + ' # ' + '>';
 
         }
+        this.setlocal(this.key,this.i);
         div.innerHTML = print;
-        this.setlocal('i',this.i);
  }
 
   reboot(img)
  {
       if(this.i == img.length || this.i == -img.length) {
          this.i = 0;
-      return this.setlocal('i',this.i);
+       this.setlocal(this.key,this.i);
       }
    }
 
   indexChange()
  {
-   console.log(this.slider);
+   console.log(this.i);
+   console.log(!localStorage.hasOwnProperty(this.key));
+
+   if(!localStorage.hasOwnProperty(this.key)) {
+      this.setlocal(this.key,this.i);
+    }
+
+   this.i = this.getlocal(this.key,this.i);
+   console.log(this.i);
+
    switch(this.slider) {
        case "next":
-            this.i = this.i + 1;
+            this.i = (this.i) + 1;
        break;
        case "previous":
-           this.i = this.i - 1;
+           this.i = (this.i) - 1;
+       break;
+       case "now":
        break;
     }
+
     console.log(this.i);
-   this.setlocal("ion",this.i);
-   console.log(localStorage.setItem("ion",this.i));
+    this.setlocal(this.key,this.i);
  }
 }
