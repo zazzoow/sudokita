@@ -56,6 +56,7 @@ function addImage(img) {
 
     div.innerHTML = print;
     localStorage.setItem("image",i);
+    console.log(localStorage.setItem("image",i));
    };
 
 };
@@ -96,10 +97,14 @@ httpRequest.onreadystatechange = function() {
 
           addImage(img);
           rightArrow.addEventListener("click", function() {
-              carrousel(img,'next');
+              // let carous = new Caroussel(img,"next",i,k);
+              // carous.carouss();
+              carrousel(img,"next");
           });
           leftArrow.addEventListener("click", function() {
-              carrousel(img,'previous');
+              // let carous = new Caroussel(img,"previous",i,k);
+              // carous.carouss();
+              carrousel(img,"previous");
           });
         }
       }
