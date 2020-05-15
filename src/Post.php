@@ -22,8 +22,8 @@ class Post
     {
       return $this->querybuilder->sendDataToDataBase($post);
     }
-    public function getImage()
+    public function getImage($post)
     {
-      return $this->querybuilder->getImageFromDatabase();
+      return $this->querybuilder->getImageFromDatabase($post);
     }
 }

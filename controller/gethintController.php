@@ -4,11 +4,18 @@ namespace App;
 
 require '../vendor/autoload.php';
 
-// dd($_POST);
+// header("Content-Type: application/json; charset=UTF-8");
+$p = json_decode($_GET["q"], true);
+
+
+
+// $p = (clean($_GET['q']);
+
+// dd($p);
 
 $image = new Post();
 
-$img = $image->getImage();
+$img = $image->getImage($p);
 //
 // foreach($img as $key => $value) {
 //        $imgs[$key] = '<img src = ' . $value . ' > ';

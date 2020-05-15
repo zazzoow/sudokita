@@ -39,58 +39,56 @@ class Caroussel
     this.reboot(img);
     this.getlocal(this.key,this.i);
 
-    console.log(this.getlocal(this.key,this.i));
+    for(j + this.i ;j + this.i < img.length + this.i ; j++) {
 
-    for(j + this.i ;j + this.i < count + this.i ; j++) {
-      console.log(this.i,j);
+              if( ((this.i + j) < (img.length) && (j + this.i) >= 0) || (j + this.i) <= ( -1 * img.length) || this.k >= img.length) {
+                 this.k = 0;
+                 images.src = img[j + this.i];
+                 this.setlocal(this.key2,this.k);
+              }
 
-        if( ((this.i + j) < (img.length) && (j + this.i) >= 0) || (j + this.i) <= ( -1 * img.length) || this.k == img.length ) {
-           images.src = img[j + this.i];
-           this.k = 0;
-          this.setlocal(this.key2,this.k);
-        }
+              else if((this.i + j) < 0) {
+                 images.src = img[img.length + this.i + j];
+              }
 
-        else if((this.i + j) < 0) {
-           images.src = img[img.length + this.i + j];
-        }
+            else if( (this.i + j) >= (img.length) ) {
+              if(!localStorage.hasOwnProperty(this.key2)) {
+                 this.setlocal(this.key2,this.k);
+               }
+               this.k = this.getlocal(this.key2,this.k);
+               images.src = img[this.k];
+               this.k = (this.k) + 1;
+               this.setlocal(this.key2,this.k);
 
-        else if( (this.i + j) >= (img.length) ) {
-          if(!localStorage.hasOwnProperty(this.key2)) {
-             this.setlocal(this.key2,this.k);
-           }
-           this.k = this.getlocal(this.key2,this.k);
-           images.src = img[this.k];
-           this.k = (this.k) + 1;
-           this.setlocal(this.key2,this.k);
+            }
+            if(j < count) {
 
-        }
+               print += '<img src = '+ images.src +' width = '+ images.width +' height = '+  images.height +' href = ' + ' # ' + '>';
 
-        print += '<img src = '+ images.src +' width = '+ images.width +' height = '+  images.height +' href = ' + ' # ' + '>';
+          }
+          console.log(this.i,this.k);
 
-        }
-        this.setlocal(this.key,this.i);
-        div.innerHTML = print;
- }
+          this.setlocal(this.key,this.i);
+          div.innerHTML = print;
+
+      }
+    }
 
   reboot(img)
  {
-      if(this.i == img.length || this.i == -img.length) {
+      if(this.i >= (img.length - 1) || this.i <= (-img.length + 1)) {
          this.i = 0;
        this.setlocal(this.key,this.i);
-      }
+     }
    }
 
   indexChange()
  {
-   console.log(this.i);
-   console.log(!localStorage.hasOwnProperty(this.key));
-
    if(!localStorage.hasOwnProperty(this.key)) {
       this.setlocal(this.key,this.i);
     }
 
    this.i = this.getlocal(this.key,this.i);
-   console.log(this.i);
 
    switch(this.slider) {
        case "next":
@@ -103,7 +101,6 @@ class Caroussel
        break;
     }
 
-    console.log(this.i);
     this.setlocal(this.key,this.i);
  }
 }

@@ -1,10 +1,10 @@
 <?php require 'views/head.views.php'; ?>
 
    <main>
-     <form>
-       <input id = "search" type = "name" name = "search" value = '' placeholder = "comics" >
+     <form method = "GET">
+       <input id = "search" type = "name" name = "search"  = "" value = '' placeholder = "comics" >
      </form>
-     <div>
+     <div id = "joj" >
          <img id ="slider-previous" src = "image/noun_Arrow_left.png" alt="right" width = "20%" height = "20% ">
         <div id ="lol">
 

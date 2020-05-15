@@ -39,16 +39,13 @@ class QueryBuilder
     {
          $query = "INSERT INTO user(name,firstname,phoneNUM,email,subject,message,added) VALUES('$post[name]','$post[firstname]','$post[phoneNUM]','$post[email]','$post[subject]','$post[message]',NOW())";
 
-         var_dump($query);
-
          return $this->pdo->query($query);
     }
 
-    public function getImageFromDatabase()
+    public function getImageFromDatabase($post)
     {
-          $query = "SELECT name FROM image";
+          $query = "SELECT url FROM image WHERE name LIKE '$post%' ";
 
           return $this->pdo->query($query)->fetchAll($this->pdo::FETCH_COLUMN);
-
     }
 }
