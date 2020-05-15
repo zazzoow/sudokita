@@ -10,7 +10,7 @@ return array(
     'App\\Post' => $baseDir . '/src/Post.php',
     'App\\QueryBuilder' => $baseDir . '/src/QueryBuilder.php',
     'App\\Router' => $baseDir . '/src/Router.php',
-    'ComposerAutoloaderInit918ba6383f5c6b6687c7d886424a95bc' => $vendorDir . '/composer/autoload_real.php',
+    'ComposerAutoloaderInitaed889f3f39a3b5d7dd06b2804a5a29a' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
-    'Composer\\Autoload\\ComposerStaticInit918ba6383f5c6b6687c7d886424a95bc' => $vendorDir . '/composer/autoload_static.php',
+    'Composer\\Autoload\\ComposerStaticInitaed889f3f39a3b5d7dd06b2804a5a29a' => $vendorDir . '/composer/autoload_static.php',
 );

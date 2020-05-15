@@ -37,11 +37,26 @@ INSERT INTO image(name,added) VALUES('/sudokita/image/Undyne.gif',NOW());
 INSERT INTO image(name,added) VALUES('/sudokita/image/charizard.jpg',NOW());
 INSERT INTO image(name,added) VALUES('/sudokita/image/f519914cf3a39ab057d3d31f09f98548.png',NOW());
 INSERT INTO image(name,added) VALUES('/sudokita/image/téléchargement.png',NOW());
--- INSERT INTO image(name,added) VALUES('/sudokita/',NOW());
--- INSERT INTO image(name,added) VALUES('/sudokita/',NOW());
--- INSERT INTO image(name,added) VALUES('/sudokita/',NOW());
--- INSERT INTO image(name,added) VALUES('/sudokita/',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/250px-Pikachu-RFVF.png',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/31-310608_png-old-ken-sugimori-art.png',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/kindpng_309747.png',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/221-2211776_alakazam-from-the-official-artwork-set-for-pokemon.png',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/images(2).jpeg',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/images\ (1).jpeg',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/images.jpeg',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/images\ (3).jpeg',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/9623d10530c3827078cb4347211961d667a11c83_hq.jpg',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/1370717056586.jpg',NOW());
+INSERT INTO image(name,added) VALUES('/sudokita/image/tumblr_mti1sjtmB91qk43wto1_r1_500.png',NOW());
 
+
+CREATE TABLE link (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255),
+  url VARCHAR(255),
+  added datetime,
+  PRIMARY KEY (id)
+);
 
 CREATE TABLE user (
   id INT NOT NULL AUTO_INCREMENT,
