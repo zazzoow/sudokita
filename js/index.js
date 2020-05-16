@@ -1,54 +1,20 @@
-let httpRequest = new XMLHttpRequest();
 let search = document.getElementById("search");
 let rightArrow = document.getElementById("slider-next");
 let leftArrow = document.getElementById("slider-previous");
+let div = document.getElementById('lol');
+window.localStorage.clear("previous");
 
 
-search.addEventListener("search", function() {
+div.addEventListener("load", Request(search.value,"now"));
 
-         let zep = this.value;
-         console.log(zep);
+search.addEventListener("keyup", function() {
+  Request(search.value,"now");
+});
 
-          let db = JSON.stringify(zep);
+rightArrow.addEventListener("click", function() {
+    Request(search.value,"next");
+});
 
-       httpRequest.open("GET","controller/gethintController.php?x=" + db,true);
-       httpRequest.open("GET","controller/gethintController.php?q=" + db,true);
-       // httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-       // httpRequest.open("GET","controller/gethintController.php?q=",true);
-
-       httpRequest.send();
-
-      httpRequest.onreadystatechange = function() {
-
-         if(httpRequest.readyState == XMLHttpRequest.DONE) {
-           if(httpRequest.status === 200) {
-
-                   // document.getElementById("lol").innerHTML = this.responseText;
-                      // httpRequest.open("GET","controller/gethintController.php?q=",true);
-                      // httpRequest.send();
-
-                          // if(httpRequest.readyState == XMLHttpRequest.DONE) {
-                          //   if(httpRequest.status === 200) {
-                          //
-                                let img = JSON.parse(this.responseText);
-                                // console.log(img);
-                                let carous = new Caroussel(img,"now");
-                                carous.carouss();
-                          //
-                                rightArrow.addEventListener("click", function() {
-                                    let carous = new Caroussel(img,"next");
-                                    carous.carouss();
-                                });
-                                leftArrow.addEventListener("click", function() {
-                                    let carous = new Caroussel(img,"previous");
-                                    carous.carouss();
-                                });
-                          //     }
-                          //   }
-                }
-
-          }
-
-      }
-
+leftArrow.addEventListener("click", function() {
+    Request(search.value,"previous");
 });

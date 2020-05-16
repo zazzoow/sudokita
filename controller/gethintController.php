@@ -7,11 +7,7 @@ require '../vendor/autoload.php';
 // header("Content-Type: application/json; charset=UTF-8");
 $p = json_decode($_GET["q"], true);
 
-
-
-// $p = (clean($_GET['q']);
-
-// dd($p);
+// var_dump($p);
 
 $image = new Post();
 
