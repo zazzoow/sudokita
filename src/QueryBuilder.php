@@ -13,13 +13,13 @@ class QueryBuilder
         $this->pdo = Connection::connect($config);
     }
 
-    public function getComicsFromDatabase()
+    public function getComicsFromDatabase($post)
     {
-        $query = "SELECT * FROM comics WHERE id = 1";
+        $query = "SELECT url FROM comics WHERE name = '$post'";
 
         var_dump($this->pdo);
 
-        return $this->pdo->query($query)->fetchAll($this->pdo::FETCH_OBJ);
+        return $this->pdo->query($query)->fetchAll($this->pdo::FETCH_OBJ);  return $this->pdo->query($query)->fetchAll($this->pdo::FETCH_COLUMN);
     }
 
     public function registerToDatabase($name,$email,$password)
@@ -42,10 +42,17 @@ class QueryBuilder
          return $this->pdo->query($query);
     }
 
+    public function getImagesFromDatabase($post)
+    {
+          $query = "SELECT url,name FROM image WHERE name LIKE '$post%' ";
+
+          return $this->pdo->query($query)->fetchAll($this->pdo::FETCH_OBJ);
+    }
+
     public function getImageFromDatabase($post)
     {
-          $query = "SELECT url FROM image WHERE name LIKE '$post%' ";
+          $query = "SELECT url FROM image WHERE name LIKE '$post'";
 
-          return $this->pdo->query($query)->fetchAll($this->pdo::FETCH_COLUMN);
+          return $this->pdo->query($query)->fetch($this->pdo::FETCH_COLUMN);
     }
 }

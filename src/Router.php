@@ -9,7 +9,7 @@ class Router
     {
         $route = clean(str_replace("/","",parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
 
-        // dd($route);
+        // var_dump($route);
 
         if(!file_exists('controller/' .$route . 'Controller.php')) {
                  http_response_code(404);

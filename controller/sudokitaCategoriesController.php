@@ -2,10 +2,17 @@
 
 namespace App;
 
+$post = format(sanitize($_POST));
+
 $image = new Post();
 
-$img = $image->getComics();
+// dd($post);
 
-var_dump($img);
+if(empty($img = $image->getComics($post))) {
+  include "views/error404.php";
+  die();
+}
+
+// dd($img);
 
 include "views/categories.views.php";

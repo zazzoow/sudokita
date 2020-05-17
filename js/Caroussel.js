@@ -47,18 +47,21 @@ class Caroussel
         for(j + this.i ;j + this.i < count ; j++) {
 
                 if(((this.i + j) < img.length) && (this.i + j >= 0 ) ) {
-                  images.src = img[j + this.i];
+                  images.src = img[j + this.i].url;
+                  images.name = img[j + this.i].name;
                 }
 
                 if((this.i + j) < 0) {
-                   images.src = img[img.length + this.i + j];
+                   images.src = img[img.length + this.i + j].url;
+                   images.name = img[img.length + this.i + j].name;
                 }
 
                 if( (this.i + j) >= img.length) {
-                   images.src = img[(this.i + j) - (img.length)];
+                   images.src = img[(this.i + j) - (img.length)].url;
+                   images.name = img[(this.i + j) - (img.length)].name;
                 }
 
-               print += '<img src = '+ images.src +' width = '+ images.width +' height = '+  images.height +' href = ' + ' # ' + '>';
+               print += '<input type = "image" name = '+ images.name +' src = '+ images.src + ' width = '+ images.width +' height = '+ images.height +' >';
 
               console.log(this.i,j,count);
 

@@ -11,10 +11,19 @@ $p = json_decode($_GET["q"], true);
 
 $image = new Post();
 
-$img = $image->getImage($p);
+
+$img = $image->getImages($p);
+
+// dd($img);
+
+
 //
 // foreach($img as $key => $value) {
-//        $imgs[$key] = '<img src = ' . $value . ' > ';
+//   foreach($value as $key2 => $value2)
+//        $imgs[$key] =  $value->url;
+//        $imgg[$key] = $value->name;
 // };
-// dd($_POST);
+//
+// dd($imgg);
+
 echo json_encode($img);

@@ -14,6 +14,17 @@ function redirect($route)
     header('Location: ' . $route);
 }
 
+function format($post)
+{
+
+  foreach($post as $key => $value) {
+
+    $pos = trim($key,'_y');
+    
+  }
+
+ return $pos;
+}
 
 function sanitize($post)
 {

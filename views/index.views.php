@@ -6,9 +6,14 @@
      </form>
      <div id = "joj" >
          <img id ="slider-previous" name = "previous" src = "image/noun_Arrow_left.png" alt="right" width = "20%" height = "20% ">
-        <div id ="lol">
+         <form method="post" action=<?php echo 'Comics'; ?> >
+            <div id ="lol">
 
-        </div>
+            </div>
+        </form>
+         <div>
+           <!-- <img src = "http://localhost/sudokita/image/Undyne.gif" alt ="welou"> -->
+         </div>
          <img id ="slider-next" name = "next" src = "image/noun_Arrow_right.png" alt="left" width = "20%" height = "20% ">
       </div>
    </main>
