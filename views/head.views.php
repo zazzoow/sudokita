@@ -8,7 +8,7 @@
     <body>
       <header>
         <nav class = "banner">
-            <a><img class="font" src="image/logo.jpg" alt="Kiwi standing on oval" width = 100%></a>
+            <a href ="/sudokita"><img class="font" src="image/logo.jpg" alt="Kiwi standing on oval" width = 100%></a>
             <?php if(!empty($_POST)) : ?>
               <?php { echo '<a class= "welcome">' . $post . '</a>'; }; ?>
             <?php else : ?>
