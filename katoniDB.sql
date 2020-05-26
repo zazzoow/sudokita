@@ -74,3 +74,9 @@ CREATE TABLE user (
   added datetime,
   PRIMARY KEY (id)
 );
+
+CREATE DATABASE prestashop COLLATE utf8mb4_general_ci;
+
+GRANT ALL PRIVILEGES ON prestashop.* TO 'phpmyadmin'@'localhost' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;

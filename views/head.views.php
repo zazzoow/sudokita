@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 
 <html lang = fr>
-    <head></head>
+    <head>
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/style.css">
+    </head>
     <body>
-      <header>
-        <nav>
-            <h1>heya</h1>
-            <a href ='Categories'>categories</a>
-            <a href ='Contact'>contact</a>
-        </nav>
-      </header>
+      

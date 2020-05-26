@@ -27,19 +27,20 @@ class Caroussel
  addImage(img)
  {
    let print = '';
+   let print2 = '';
    let j = 0;
    let images = document.createElement("img");
    let div = document.getElementById("lol");
 
-    images.width = "100";
-    images.height = "100";
+    // images.width = "100";
+    // images.height = "100";
 
     this.reboot(img);
     this.getlocal(this.key,this.i);
     let count = this.counting(img);
 
    if (img.length == 0) {
-       div.innerHTML = '';
+       div.innerHTML = '<p>aucun resultat trouvé<p>';
      }
      else
      {
@@ -49,19 +50,27 @@ class Caroussel
                 if(((this.i + j) < img.length) && (this.i + j >= 0 ) ) {
                   images.src = img[j + this.i].url;
                   images.name = img[j + this.i].name;
+                  // images.src2 = img[(j + this.i) + 1].url;
+                  // images.name2 = img[(j + this.i) + 1].name;
                 }
 
                 if((this.i + j) < 0) {
                    images.src = img[img.length + this.i + j].url;
                    images.name = img[img.length + this.i + j].name;
+                   // images.src2 = img[(img.length + this.i + j) + 1].url;
+                   // images.name2 = img[(img.length + this.i + j) + 1].name;
                 }
 
                 if( (this.i + j) >= img.length) {
                    images.src = img[(this.i + j) - (img.length)].url;
-                   images.name = img[(this.i + j) - (img.length)].name;
+                   images.src2 = img[(this.i + j) - (img.length)].url;
+                   // images.name = img[((this.i + j) - (img.length)) + 1].name;
+                   // images.name2 = img[((this.i + j) - (img.length)) + 1].name;
+
                 }
 
-               print += '<input type = "image" name = '+ images.name +' src = '+ images.src + ' width = '+ images.width +' height = '+ images.height +' >';
+               print += '<input class="picture" type = "image" name = '+ images.name +' src = '+ images.src + ' >';
+               // print2 += '<input type = "image" name = '+ images.name2 +' src = '+ images.src2 + ' >';
 
               console.log(this.i,j,count);
 

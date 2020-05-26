@@ -6,7 +6,7 @@ if(!empty($_POST))  {
 
     $post = sanitize($_POST);
 
-    var_dump($post);
+    // var_dump($post);
 
     $send = new Post();
 

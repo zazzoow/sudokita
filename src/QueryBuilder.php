@@ -17,7 +17,7 @@ class QueryBuilder
     {
         $query = "SELECT url FROM comics WHERE name = '$post'";
 
-        var_dump($this->pdo);
+        // var_dump($this->pdo);
 
         return $this->pdo->query($query)->fetchAll($this->pdo::FETCH_OBJ);  return $this->pdo->query($query)->fetchAll($this->pdo::FETCH_COLUMN);
     }

@@ -1,0 +1,108 @@
+@font-face {
+  font-family: katonifont;
+   src: url("../font/KhakiStd-1.otf") format('opentype');
+   font-weight: "bold";
+}
+
+@font-face {
+  font-family: genre;
+   src: url('../font/KhakiStd-1.otf') format('opentype'),
+  url("../font/fjyrqt+arial.ttf") format("opentype");
+  /* url("../font/ntailu_0.ttf") format("truetype"), */
+  /* url("../font/seguisym.ttf") format("truetype"); */
+   font-weight:"bold";
+}
+
+header {
+  background-color: white;
+}
+
+.banner {
+   /* border: 1px solid red; */
+   display: flex;
+}
+
+.font {
+  /* background: url("../font/sudokitabu.svg"); */
+  /* border:1px solid blue; */
+  /* display: inline-block; */
+  /* width: 10%; */
+  margin-left: 4%;
+  font-size:300%;
+}
+
+.welcome {
+  /* display: inline-block; */
+  margin-top: 3%;
+  margin-bottom:1%;
+  margin-left: 10%;
+  padding-right: 15%;
+  /* padding-bottom: 0.3%; */
+  padding-top: 1%;
+  border: 1px solid #fbb03f;
+  background-color: #fbb03f;
+  font-family: katonifont, sans-serif;
+  width: 50%;
+  font-size: 280%;
+  text-align: center;
+}
+
+main {
+  background : linear-gradient( white ,#fde2b8, #fbb03f );
+  margin-top: 3%;
+  text-align: center;
+}
+
+
+#search {
+  border-radius: 20px;
+  padding: 1%;
+  background-color: #6d6c5c;
+}
+
+::placeholder {
+  color: white;
+}
+
+#joj {
+  display : flex;
+  /* border:1px solid red; */
+  /* margin-left: 3%; */
+  padding-left: 5%;
+}
+
+.slider  {
+  /* display: inline; */
+  margin-top: 10%;
+  position: sticky;
+  width: 60px;
+  height: 300px;
+}
+
+#slider-previous {
+  margin-left: 8%;
+}
+
+#slider-next {
+  margin-right: 0%;
+}
+
+#lol {
+  /* background-color: white; */
+  margin-top: 3%;
+  width: 900px;
+}
+
+
+.picture {
+  /* display: inline; */
+   width: 250px;
+   height: 200px;
+
+}
+
+.comics {
+  margin: auto;
+  width: 700px;
+  height: 1200px;
+}
