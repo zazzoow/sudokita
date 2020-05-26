@@ -1,12 +1,5 @@
 <?php require 'views/head.views.php'; ?>
 
-
-<header>
-  <nav class = "banner">
-      <a><img class="font" src="image/logo.jpg" alt="Kiwi standing on oval" width = 100%></a>
-      <a class= "welcome">Bienvenue</a>
-  </nav>
-</header>
    <main>
      <form method = "GET">
        <input id = "search" type = "name" name = "search"  value ='' placeholder = "comics" >
