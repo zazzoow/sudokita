@@ -19,7 +19,6 @@ html {
 
 header {
   background-color: white;
-  padding-bottom: 2%;
 }
 
 .banner {
@@ -51,7 +50,7 @@ h2 {
   padding-right: 15%;
   /* padding-bottom: 0.3%; */
   padding-top: 1%;
-  border: 1px solid #fbb03f;
+  /* border: 1px solid #fbb03f; */
   background-color: #fbb03f;
   font-family: katonifont, sans-serif;
   width: 50%;
@@ -61,7 +60,7 @@ h2 {
 
 main {
   background : linear-gradient( white ,#fde2b8, #fbb03f );
-  padding-top: 2%;
+  padding-top: 4%;
   padding-bottom: 7%;
   text-align: center;
 }
@@ -77,45 +76,93 @@ main {
   color: white;
 }
 
-#joj {
+#caroussel {
+  /* border: 1px solid red; */
   display : flex;
+  margin-top: 5%;
+  height: 300px;
   /* border:1px solid red; */
-  /* margin-left: 3%; */
-  padding-left: 5%;
 }
 
 .slider  {
-  /* display: inline; */
-  margin-top: 10%;
-  position: sticky;
+  margin-top: 3%;
+  /* background-color: white; */
+  /* border: 1px solid red; */
+  position: absolute;
   width: 60px;
   height: 300px;
+  z-index:1;
 }
 
 #slider-previous {
-  margin-left: 8%;
-}
-
-#slider-next {
   margin-right: 0%;
 }
 
-#lol {
+#slider-next {
+  margin-left: 94%;
   /* background-color: white; */
+}
+
+#scrolled {
+  /* background-color: white; */
+  display: flex;
+  text-align: center;
+  flex-wrap: nowrap;
+  height: 300px;
+  /* border:1px solid red; */
   margin-top: 3%;
-  width: 900px;
+  z-index:0;
+  position: relative;
+}
+
+#nothing {
+  display: block;
+  /* border:1px solid red; */
+  text-align: center;
+    font-family: katonifont;
+    font-size: 300%;
+    width: 100%;
+}
+
+.picture {
+   width: 20%;
+   height: 300px;
+   transition-duration: 0.2s;
+}
+
+.picture:hover {
+  width: 25%;
+  height: 350px;
+  margin-top: -10%;
+  /* margin-left: -1%; */
+  /* margin-right: -150px; */
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 
-.picture {
-  /* display: inline; */
-   width: 250px;
-   height: 200px;
+.introduce {
+  display: inline-block;
+  width: 40%;
+  /* border: 1px solid red; */
+}
 
+.description {
+  display: inline-block;
+  font-family: katonifont;
+  /* border: 1px solid red; */
+  background-color: white;
+  width: 50%;
+  margin-right: 5%;
+  float: right;
+}
+
+.imgComics {
+  width: 80%;
 }
 
 .comics {
-  padding-left: 20%;
+  padding-left: 7%;
   margin: auto;
   width: 900px;
   height: 1200px;
@@ -125,12 +172,13 @@ main {
   border: none;
   border-radius: 20px;
   padding: 1%;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-left: 10%;
+  padding-right: 10%;
   background-color: blue;
 }
 
 footer {
+  clear: both;
   background-color: #444444;
 }
 

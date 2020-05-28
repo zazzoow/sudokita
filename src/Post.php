@@ -32,4 +32,9 @@ class Post
     {
       return $this->querybuilder->getImageFromDatabase($post);
     }
+
+    public function getDescribe($post)
+    {
+      return $this->querybuilder->getDescriptionFromDatabase($post);
+    }
 }

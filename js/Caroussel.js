@@ -30,7 +30,8 @@ class Caroussel
    let print2 = '';
    let j = 0;
    let images = document.createElement("img");
-   let div = document.getElementById("lol");
+   let div = document.getElementById("scrolled");
+   let nothing = document.getElementById("nothing");
 
     // images.width = "100";
     // images.height = "100";
@@ -40,10 +41,18 @@ class Caroussel
     let count = this.counting(img);
 
    if (img.length == 0) {
-       div.innerHTML = '<p>aucun resultat trouvé<p>';
+       nothing.innerHTML = '<p>aucun resultat trouvé<p>';
+       nothing.style.display = "block";
+       // nothing.style.position= "relative";
+       // nothing.style.left ="100%";
+       // nothing.style.top = "30%";
+       div.style.display = "none";
+       // div.style.textAlign = "right";
      }
      else
      {
+       nothing.style.display = "none";
+       div.style.display = "flex";
 
         for(j + this.i ;j + this.i < count ; j++) {
 
@@ -91,7 +100,7 @@ class Caroussel
 
  counting(img)
  {
-   let counting = 6;
+   let counting = 5;
 
     if(counting >= img.length) {
       this.i = 0;

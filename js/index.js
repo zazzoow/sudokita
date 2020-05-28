@@ -1,7 +1,7 @@
 let search = document.getElementById("search");
 let rightArrow = document.getElementById("slider-next");
 let leftArrow = document.getElementById("slider-previous");
-let div = document.getElementById('lol');
+let div = document.getElementById('scrolled');
 window.localStorage.clear("previous");
 
 

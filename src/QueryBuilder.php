@@ -55,4 +55,11 @@ class QueryBuilder
 
           return $this->pdo->query($query)->fetch($this->pdo::FETCH_COLUMN);
     }
+
+    public function getDescriptionFromDatabase($post)
+    {
+      $query = "SELECT description FROM image WHERE name LIKE '$post'";
+
+      return $this->pdo->query($query)->fetch($this->pdo::FETCH_COLUMN);
+    }
 }
