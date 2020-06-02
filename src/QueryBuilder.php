@@ -17,8 +17,6 @@ class QueryBuilder
     {
         $query = "SELECT url FROM comics WHERE name = '$post'";
 
-        // var_dump($this->pdo);
-
         return $this->pdo->query($query)->fetchAll($this->pdo::FETCH_OBJ);  return $this->pdo->query($query)->fetchAll($this->pdo::FETCH_COLUMN);
     }
 
@@ -58,7 +56,7 @@ class QueryBuilder
 
     public function getDescriptionFromDatabase($post)
     {
-      $query = "SELECT description FROM image WHERE name LIKE '$post'";
+      $query = "SELECT synopsis FROM description WHERE name LIKE '$post'";
 
       return $this->pdo->query($query)->fetch($this->pdo::FETCH_COLUMN);
     }

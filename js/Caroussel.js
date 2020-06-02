@@ -33,8 +33,6 @@ class Caroussel
    let div = document.getElementById("scrolled");
    let nothing = document.getElementById("nothing");
 
-    // images.width = "100";
-    // images.height = "100";
 
     this.reboot(img);
     this.getlocal(this.key,this.i);
@@ -43,11 +41,8 @@ class Caroussel
    if (img.length == 0) {
        nothing.innerHTML = '<p>aucun resultat trouvé<p>';
        nothing.style.display = "block";
-       // nothing.style.position= "relative";
-       // nothing.style.left ="100%";
-       // nothing.style.top = "30%";
        div.style.display = "none";
-       // div.style.textAlign = "right";
+
      }
      else
      {
@@ -59,27 +54,19 @@ class Caroussel
                 if(((this.i + j) < img.length) && (this.i + j >= 0 ) ) {
                   images.src = img[j + this.i].url;
                   images.name = img[j + this.i].name;
-                  // images.src2 = img[(j + this.i) + 1].url;
-                  // images.name2 = img[(j + this.i) + 1].name;
                 }
 
                 if((this.i + j) < 0) {
                    images.src = img[img.length + this.i + j].url;
                    images.name = img[img.length + this.i + j].name;
-                   // images.src2 = img[(img.length + this.i + j) + 1].url;
-                   // images.name2 = img[(img.length + this.i + j) + 1].name;
                 }
 
                 if( (this.i + j) >= img.length) {
                    images.src = img[(this.i + j) - (img.length)].url;
                    images.src2 = img[(this.i + j) - (img.length)].url;
-                   // images.name = img[((this.i + j) - (img.length)) + 1].name;
-                   // images.name2 = img[((this.i + j) - (img.length)) + 1].name;
-
                 }
 
                print += '<input class="picture" type = "image" name = '+ images.name +' src = '+ images.src + ' >';
-               // print2 += '<input type = "image" name = '+ images.name2 +' src = '+ images.src2 + ' >';
 
               console.log(this.i,j,count);
 

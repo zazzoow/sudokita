@@ -1,7 +1,5 @@
 <?php
 
-
-
 function dd(...$args)
 {
     echo'<pre>';
@@ -9,18 +7,11 @@ function dd(...$args)
     echo'</pre>';
 }
 
-function redirect($route)
-{
-    header('Location: ' . $route);
-}
-
 function format($post)
 {
-
   foreach($post as $key => $value) {
 
     $pos = trim($key,'_y');
-    
   }
 
  return $pos;
@@ -44,9 +35,4 @@ function clean($string)
     $newString = htmlentities($string);
 
     return $newString;
-}
-
-function sessionExists()
-{
-    return (isset($_SESSION) && !empty($_SESSION));
 }
