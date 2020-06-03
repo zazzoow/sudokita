@@ -17,7 +17,36 @@ function Request(value,slider) {
 
                 carous = new Caroussel(img,slider);
                 carous.carouss();
+
             }
          }
        };
+}
+
+function transition(value,slider) {
+
+  let scroll = document.querySelectorAll(".picture");
+  let pos = 0;
+  let id = setInterval(frame, 10);
+
+  function frame() {
+
+      if (pos == 20)
+      {
+        clearInterval(id);
+        Request(value,slider);
+      }
+      else {
+      pos++;
+      for(let n = 0; n < scroll.length ; n++) {
+        if(slider == "left") {
+         scroll[n].style.left = pos +"%";
+        }
+        else if (slider == "right") {
+         scroll[n].style.right = pos +"%";  
+        }
+       }
+     }
+
+  }
 }

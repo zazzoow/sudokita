@@ -24,6 +24,7 @@ class Caroussel
  getlocal(store,item) {
    return parseInt(this.storage.getItem(store,item));
  }
+
  addImage(img)
  {
    let print0 = '';
@@ -120,10 +121,10 @@ class Caroussel
    this.i = this.getlocal(this.key,this.i);
 
    switch(this.slider) {
-       case "next":
+       case "right":
             this.i = (this.i) + 1;
        break;
-       case "previous":
+       case "left":
            this.i = (this.i) - 1;
        break;
        case "now":

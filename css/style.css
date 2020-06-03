@@ -96,7 +96,8 @@ main {
 
 #scrolled {
   display: flex;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
+  overflow-y: visible;
   text-align: center;
   flex-wrap: nowrap;
   justify-content: center;
@@ -124,6 +125,10 @@ main {
    transition-duration: 0.2s;
    /* animation-name: zaz; */
    /* animation-duration: 3s; */
+}
+
+#scrolled:hover: {
+  overflow-x: visible;
 }
 
 .picture:hover {
