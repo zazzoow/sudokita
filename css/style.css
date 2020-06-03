@@ -4,6 +4,15 @@
    font-weight: "bold";
 }
 
+@keyframes zaz {
+  from {
+    left: auto;
+  }
+  to {
+    left: 300px;
+  }
+}
+
 html {
   background-color: #444444;;
 }
@@ -22,7 +31,7 @@ header {
   font-size:300%;
 }
 
-h2 {
+h1,h2,.error404 {
   font-family: katonifont, sans-serif;
   font-size: 280%;
   text-align: center;
@@ -77,21 +86,26 @@ main {
 
 #slider-previous {
   margin-right: 0%;
+  transition-duration: 0.2s;
 }
 
 #slider-next {
+  transition-duration: 0.2s;
   margin-left: 94%;
 }
 
 #scrolled {
   display: flex;
+  /* overflow-x: hidden; */
   text-align: center;
   flex-wrap: nowrap;
+  justify-content: center;
   height: 300px;
-  /* border:1px solid red; */
+  border:1px solid red;
   margin-top: 3%;
   z-index:0;
   position: relative;
+  transition-delay: 0.2s;
 }
 
 #nothing {
@@ -104,9 +118,12 @@ main {
 }
 
 .picture {
+   position: relative;
    width: 20%;
    height: 300px;
    transition-duration: 0.2s;
+   /* animation-name: zaz; */
+   /* animation-duration: 3s; */
 }
 
 .picture:hover {

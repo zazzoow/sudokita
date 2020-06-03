@@ -26,7 +26,8 @@ class Caroussel
  }
  addImage(img)
  {
-   let print = '';
+   let print0 = '';
+   let print1 ='';
    let print2 = '';
    let j = 0;
    let images = document.createElement("img");
@@ -39,7 +40,7 @@ class Caroussel
     let count = this.counting(img);
 
    if (img.length == 0) {
-       nothing.innerHTML = '<p>aucun resultat trouvé<p>';
+       nothing.innerHTML = '<p>aucun resultat trouvé</p>';
        nothing.style.display = "block";
        div.style.display = "none";
 
@@ -66,14 +67,23 @@ class Caroussel
                    images.src2 = img[(this.i + j) - (img.length)].url;
                 }
 
-               print += '<input class="picture" type = "image" name = '+ images.name +' src = '+ images.src + ' >';
+                if(j == 0) {
+                  print0 += '<input class="picture" type = "image" name = '+ images.name +' src = '+ images.src + ' >';
+                }
+                else if ( (j > 0) && ((this.i + j) < (count - 1)) ) {
+                  print1 += '<input class="picture" type = "image" name = '+ images.name +' src = '+ images.src + ' >';
+                }
+                else {
+                  print2 += '<input class="picture" type = "image" name = '+ images.name +' src = '+ images.src + ' >';
+                }
+
 
               console.log(this.i,j,count);
 
               this.setlocal(this.key,this.i);
 
           }
-        div.innerHTML = print;
+        div.innerHTML = print0 + print1 + print2;
        }
   }
 
@@ -87,7 +97,7 @@ class Caroussel
 
  counting(img)
  {
-   let counting = 5;
+   let counting = 7;
 
     if(counting >= img.length) {
       this.i = 0;
