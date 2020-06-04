@@ -7,7 +7,7 @@ class Caroussel
    this.slider = slider;
    this.i = 0;
    this.k = 0;
-   this.key = "previous";
+   this.key = "left";
    this.storage = window.localStorage;
  }
 
